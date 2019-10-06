@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.screen {
+  position: relative;
+}
+
+.screen > button[data-testid='close-button'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  appearance: none;
+  height: 2rem;
+  width: 2rem;
+  line-height: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen > button:before {
+  content: '×';
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}
